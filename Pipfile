@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+keras = "*"
+
+[packages]
+keras = "==2.2.5"
+tensorflow = "==1.14"
+flask = "*"
+pillow = "*"
+
+[requires]
+python_version = "3.7"
