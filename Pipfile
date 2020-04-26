@@ -7,10 +7,12 @@ verify_ssl = true
 keras = "*"
 
 [packages]
-keras = "==2.2.5"
-tensorflow = "==1.14"
-flask = "*"
 pillow = "*"
+imutils = "*"
+opencv-python = "*"
+tensorflow = "==1.14"
+keras = "==2.2.5"
+flask = "*"
 
 [requires]
 python_version = "3.7"
