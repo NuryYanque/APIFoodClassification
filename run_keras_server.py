@@ -22,6 +22,7 @@ model = None
 def load_model_from_path(path):
     graph = tf.get_default_graph()
     model = load_model(path)
+    model._make_predict_function()
     return graph, model
 
 def load_all_models():
@@ -74,32 +75,30 @@ class_hierarchy = {
     "pepsi": {0: "garrafa-original-pepsi", 1: "garrafa-twist-pepsi", 2: "lata-original-pepsi", 3: "lata-semacucar-pepsi"},
 }
 
-load_all_models()
-
 def prediction_by_model(image, graph, model):
-    X = image
-    try:
-        with graph.as_default():
-            print("fnjsrrgorghiarowsarjghaowefjoapefkaejaf")
-            predictions = model.predict(X)
-            print("Prediction: ", predictions)
-            return predictions
-    except Exception as err:
-        raise(err)
-    return None
+    print(image.shape)
+    with graph.as_default():
+        print("fnjsrrgorghiarowsarjghaowefjoapefkaejaf")
+        predictions = model.predict(image)
+        print("Prediction: ", predictions)
+        return predictions
+    # except Exception as err:
+    #     raise(err)
+    # return None
 
 def run_predictions(image1, imagex):
     predictions = []
     # nivel 1
     graph, model_nivel1 = g_model_objs['model_nivel1']
-    try:
-        produto = prediction_by_model(image1, graph, model_nivel1)
-        y_predict_index = np.argmax(produto)
-        predictions.append(class_hierarchy["produto"][y_predict_index])
-    except Exception as error:
-        print("Error in predict")
+    #try:
+    produto = prediction_by_model(image1, graph, model_nivel1)
+    y_predict_index = np.argmax(produto)
+    predictions.append(class_hierarchy["produto"][y_predict_index])
+    # except Exception as error:
+    #     print("Error in predict")
     #nivel 2
     if y_predict_index == 0: # refrigerante
+        
         graph, model_nivel2 = g_model_objs['model_nivel2_refrigerante']
         # 0: coca-cola
         # 1: fanta
@@ -165,7 +164,7 @@ def run_predictions(image1, imagex):
             y3_predict_index = np.argmax(carrefour)
             predictions.append(class_hierarchy["carrefour"][y3_predict_index])
         elif y2_predict_index == 1:
-            raph, model_nivel3 = g_model_objs['model_nivel3_delvalle']
+            graph, model_nivel3 = g_model_objs['model_nivel3_delvalle']
             # 0: abacaxi
             # 1: caju
             # 2: laranja
@@ -227,9 +226,12 @@ def predict():
     data["Prediction Nivel 1"] = predictions[0]
     data["Prediction Nivel 2"] = predictions[1]
     data["Prediction Nivel 3"] = predictions[2]
-    K.clear_session()
+    # K.clear_session()
     print(data)
     return flask.jsonify(data)
 
+
 if __name__ == "__main__":
+    # tf.initialize_all_variables().run()
+    load_all_models()
     app.run()
