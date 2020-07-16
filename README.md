@@ -3,4 +3,4 @@ Deployment of models for hierarchical classification of supermarket produtcs
 
 ## Models
 All models can be found in:
-https://drive.google.com/open?id=1YsJx2Hcb3uKeIyC4tvvxF47VaD8Rzi5w
+https://drive.google.com/drive/folders/1NIPUqkbaWMSTtiH_ImTR5raEnJzAyTBB?usp=sharing
