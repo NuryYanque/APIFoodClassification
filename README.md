@@ -4,7 +4,7 @@ Deteta qual o produto na imagem capturada por um telefone
 ## Installation
 Estamos utilizando o [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/basics.html) para salvar as dependencias do projeto. Para instalar as dependencias fazemos o seguinte:
 - Primeiro temos que ter o pipenv instalado utilizando ``pip install pipenv``
-- Depois clonar este repositorio ``https://github.com/yulenn/APIFoodClassification.git`` a tu maquina local.
+- Depois clonar este repositorio ``https://github.com/yulenn/APIFoodClassification.git`` na maquina local.
 - Instalar as dependencias que estão listadas no arquivo``Pipfile`` utilizando ``pipenv install``.
 Pronto, voce tem as dependencias instaladas no environment do projeto.
 
