@@ -31,26 +31,32 @@ Ele vai ligar nosso servidor que escuta o porto ``http://127.0.0.1:5000/``
 Utilizamos Postman como cliente que envia uma requisição POST no seguinte endereço ``http://127.0.0.1:5000/predict``
 
 - Nossa imagem query é
+
   ![](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/coca-original.jpg)
 
 - Porem precisamos obter o formato ``base64`` da imagem query que é:
   [encoding BASE64 imagem query](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/base64_cocacola-original.txt)
 
 - Aqui temos um panorama geral da consulta no Postman
-  ``bash
+
+  ``
     POST: / 
     body: {
     image: IMAGE_B64_AS_STRING
     }
   ``
+
   ![](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/resultado.png)
 
 - Apertamos o butão SEND e obtemos a resposta do servidor
+
   ![](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/labels_detetatos.png)
 
 
 ## Lista de Produtos considerados no projeto
-``bash
+Foram coletadas as fotos desses produtos com o telefone, para o treinamento dos modelos na data do Julio 2019 até o Julio 2020.
+
+``
 class_hierarchy = {
     "produto"     : { 0: "refrigerante", 
                       1: "suco" 
