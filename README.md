@@ -19,7 +19,7 @@ Pronto =)
 - Retornar no repositorio principal ``APIProductClassification``
 - Ativar o ``Pipenv`` com o comando ``pipenv shell`` para entrar no enviroment do projeto
 - Por fim, rodar o script ``run_keras_server.py`` com ``python run_keras_server.py``
-  Com isso, o servidor está ouvindo o seguinte endpoint ``run_keras_server.py``
+  Com isso, o servidor está ouvindo o seguinte endpoint ``http://127.0.0.1:5000``
 
 ## Exemplo de uso
 - Imagem de consulta
