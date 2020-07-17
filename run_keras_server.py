@@ -76,6 +76,7 @@ class_hierarchy = {
                     }
 }
 
+
 def load_model_from_path(path):
     graph = tf.get_default_graph()
     model = load_model(path)
@@ -87,6 +88,7 @@ def load_all_models():
     g_model_objs = dict()
 
     g_model_objs = {
+        # 'model_nivel1'             : load_model_from_path('models/model_nivel1_VGG.h5'),
         'model_nivel1'             : load_model_from_path('models/model_nivel1_LeNet.h5'),
         'model_nivel2_suco'        : load_model_from_path('models/model_nivel2_LeNetSuco.h5'),
         'model_nivel2_refrigerante': load_model_from_path('models/model_nivel2_LeNetRefrigerante.h5'),
@@ -99,6 +101,7 @@ def load_all_models():
         'model_nivel3_maguary'     : load_model_from_path('models/model_nivel3_Maguary.h5'),
         'model_nivel3_carrefour'   : load_model_from_path('models/model_nivel3_Carrefour.h5')
     }
+
 
 
 def prediction_by_model(image, graph, model):
@@ -215,8 +218,8 @@ def nivel3_predict(image, y1_predict_index, y2_predict_index):
     
     return y3_predict_index
 
-def processing_image(image, target):
-    aap = AspectAwarePreprocessor(target[0],target[1])
+def processing_image(image):
+    aap = AspectAwarePreprocessor(64, 64)
     iap = ImageToArrayPreprocessor()
 
     sdl_nivel = SimpleDatasetLoader(preprocessors=[aap, iap])
@@ -250,8 +253,10 @@ def predict():
     image = Image.open(BytesIO(base64.b64decode(imageb64)))
     image = image.convert(mode='RGB')
     image = np.array(image)
+    image = image[...,::-1]
     
-    image = processing_image(image, target=(64,64))
+    
+    image = processing_image(image)
     # get detected product
     predictions = run_predictions(image)
     
