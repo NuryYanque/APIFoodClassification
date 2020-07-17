@@ -37,10 +37,12 @@ Utilizamos Postman como cliente que envia uma requisição POST no seguinte ende
   [encoding BASE64 imagem query](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/base64_cocacola-original.txt)
 
 - Aqui temos um panorama geral da consulta no Postman
+  ``
     POST: / 
     body: {
     image: IMAGE_B64_AS_STRING
     }
+  ``
   ![](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/resultado.png)
 
 - Apertamos o butão SEND e obtemos a resposta do servidor
@@ -48,7 +50,7 @@ Utilizamos Postman como cliente que envia uma requisição POST no seguinte ende
 
 
 ## Lista de Produtos considerados no projeto
-
+``
 class_hierarchy = {
     "produto"     : { 0: "refrigerante", 
                       1: "suco" 
@@ -104,3 +106,4 @@ class_hierarchy = {
                       3: "lata-semacucar-pepsi"
                     }
 }
+``
