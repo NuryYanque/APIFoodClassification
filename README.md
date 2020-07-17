@@ -27,9 +27,9 @@ Pronto =)
 - Na verdade, precisamos o formato ``base64`` da imagem consulta que é:
   ![base64](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/base64_suco_dobem_limonada.txt) 
 
-- Utilizamos o postman como cliente para enviar uma requisição, para o ``http://127.0.0.1:5000/predict`` com o formato ``base64`` da imagem de consulto, veja-se:
-![Exemplo de um resultado](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/resultado.png)
+- Utilizamos o postman como cliente para enviar uma requisição, para o ``http://127.0.0.1:5000/predict`` com o formato ``base64`` da imagem de consulta, e apertamos no botão ``Send``, veja-se:
+![resultado](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/resultado.png)
 
-- Finalmente enviamos a requisição e obtemos os labels detetados da imagem query
+- Obtemos os labels detetados da imagem query
 ![Rótulos detetados](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/labels_detetatos.png)
 
