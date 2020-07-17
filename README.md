@@ -30,6 +30,6 @@ Pronto =)
 - Utilizamos o postman como cliente para enviar uma requisição, para o ``http://127.0.0.1:5000/predict`` com o formato ``base64`` da imagem de consulta, e apertamos no botão ``Send``, veja-se:
 ![resultado](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/resultado.png)
 
-- Obtemos os labels detetados da imagem query
+- Obtemos os labels detetados da imagem de consulta
 ![Rótulos detetados](https://github.com/yulenn/APIFoodClassification/blob/master/test_images/labels_detetatos.png)
 
