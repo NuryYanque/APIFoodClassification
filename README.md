@@ -1,5 +1,4 @@
 # APIFoodClassification
-# API Food Classification
 Deteta qual o produto na imagem capturada por um telefone
 
 ## Installation
