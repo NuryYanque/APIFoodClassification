@@ -8,7 +8,7 @@ Modelo que prevê o nome e o tipo de um produto numa foto.
 
 Utilizamos [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/basics.html) para criar um ambiente com as dependencias do projeto 
 
-- Instalamos o ``Pipenv`` com ``pip install pipenv``
+- Instalamos o ``Pipenv`` com ``pip3 install pipenv``
 
 E instalamos todas as dependencias do projeto que estão no arquivo ``Pipfile`` com 
 - o comando ``pipenv install``
