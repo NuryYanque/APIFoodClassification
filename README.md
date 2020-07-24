@@ -4,10 +4,12 @@ Modelo que prevê o nome e o tipo de um produto numa foto.
 ## Instalação
 
 - Clonamos o repositorio ``https://github.com/yulenn/APIFoodClassification``
+- Instalamos pip3 ``sudo apt install python3-pip``
+- Instalamos Python3.7 https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/
 
 Utilizamos [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/basics.html) para criar um ambiente com as dependencias do projeto 
 
-- Instalamos o ``Pipenv`` com ``pip install pipenv``
+- Instalamos o ``Pipenv`` com ``pip3 install pipenv``
 
 E instalamos todas as dependencias do projeto que estão no arquivo ``Pipfile`` com 
 - o comando ``pipenv install``
@@ -25,6 +27,12 @@ Pronto =)
 
 - Rodamos o script ``run_keras_server.py`` com ``python run_keras_server.py``
 Ele vai ligar nosso servidor que escuta o porto ``http://127.0.0.1:5000/``
+
+Caso ter o seguinte erro ``ImportError: libSM.so.6: cannot open shared object file: No such file or directory``
+- Rodar ``apt update && apt install -y libsm6 libxext6 libxrender-dev`` no terminal
+- Rodar o script ``run_keras_server.py`` de novo.
+
+Pronto =)
 
 
 ## Exemplo de uso
