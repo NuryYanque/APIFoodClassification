@@ -253,6 +253,7 @@ def predict():
     image = Image.open(BytesIO(base64.b64decode(imageb64)))
     image = image.convert(mode='RGB')
     image = np.array(image)
+    # convert RGB to BGR
     image = image[...,::-1]
     
     
