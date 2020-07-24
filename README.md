@@ -4,6 +4,7 @@ Modelo que prevê o nome e o tipo de um produto numa foto.
 ## Instalação
 
 - Clonamos o repositorio ``https://github.com/yulenn/APIFoodClassification``
+- Instalamos pip3 ``sudo apt install python3-pip``
 
 Utilizamos [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/basics.html) para criar um ambiente com as dependencias do projeto 
 
